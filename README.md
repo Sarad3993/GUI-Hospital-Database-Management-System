@@ -15,4 +15,4 @@ I have used tkcalendar module in this project so install it too:
 --> After u open the project file; replace my host, username , password with your MySQL ones..
 --> Then run the project... it should work fine 
 
---> Hope u guys like it !!!
+#Hope u guys like it !!!
