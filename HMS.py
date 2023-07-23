@@ -234,7 +234,7 @@ def delete_data():
     conn.commit()
     clearData()
     fetch_data()
-    tkinter.messagebox.showinfo("Success", f"Record deleted successfully!")
+    tkinter.messagebox.showinfo("Success", "Record deleted successfully!")
     conn.close()
 
 
@@ -268,7 +268,7 @@ def export_data():
         id.append(var3[0]),name.append(var3[1]),dob.append(var3[2]),gender.append(var3[3]),age.append(var3[4]),email.append(var3[5]),address.append(var3[6]),contact.append(var3[7]),relatives.append(var3[8]),insurance.append(var3[9]),bloodgrp.append(var3[10]),diagnosis.append(var3[11]),referredto.append(var3[12])
     data = ['Id','Name','DOB','Gender','Age','Email','Address','Contact','Relatives Name','Insurance','Blood Group','Diagnosis','Referred To']
     data_frame = pd.DataFrame(list(zip(id,name,dob,gender,age,email,address,contact,relatives,insurance,bloodgrp,diagnosis,referredto)),columns=data)
-    paths = r'{}.csv'.format(var1)  # where to save is defined in var1
+    paths = f'{var1}.csv'
     data_frame.to_csv(paths,index=False)
     tkinter.messagebox.showinfo('Notifications', f'Patients data saved successfully in {paths}')
 
